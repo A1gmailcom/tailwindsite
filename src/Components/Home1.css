@@ -1,0 +1,106 @@
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: white;
+  color: blue;
+  padding: 8px 16px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  cursor: pointer;
+  max-width: 200px; /* Adjust the max-width value as needed */
+  width: 100%;
+  box-sizing: border-box; /* Add this property to include border in element width */
+}
+
+.custom-button span.handshake-emoji {
+  margin-left: 5px; /* Adjust the spacing between text and emoji */
+}
+
+  
+  .custom-button:hover {
+    background-color: blue;
+    color: white;
+    border-color: blue; /* Change border color on hover */
+  }
+  
+  .handshake-emoji {
+    margin-left: 8px;
+    animation: emoji-move 1s infinite alternate;
+  }
+  
+  @keyframes emoji-move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(10px);
+    }
+  }
+  /* Home1.css */
+
+.hero-banner {
+  display: flex;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  margin-top: 120px;
+}
+
+.hero-banner .wrap {
+  padding: 35px 16px !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: url('../assets/images/yellow-c1.png') no-repeat 72% 32% !important;
+
+  @media(max-width:767px) {
+    font-size: 2.4rem;
+    max-width: 100%;
+    background: url('../assets/images/yellow-c1.png') no-repeat 130% 22% !important;
+  }
+}
+
+.hero-banner h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  max-width: 80%;
+
+  @media(max-width:767px) {
+    font-size: 2.4rem;
+    max-width: 100%;
+  }
+}
+
+.hero-banner .tagline {
+  font-size: 1.5rem;
+}
+
+.hero-banner .unlock-text {
+  font-size: 0.750rem;
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: url('../assets/images/wavebg.jpg') no-repeat 110% bottom;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+@media (max-width: 767px) {
+  .hero-banner::before {
+    width: 100%;
+    background-position: right bottom;
+  }
+}
+
